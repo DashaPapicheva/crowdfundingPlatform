@@ -1,14 +1,12 @@
 <template>
   <v-container>
+
+    <div class="mainImg">
+      <p>Краудфандинговая площадка</p>
+    </div>
+
     <v-row class="text-center">
-      <v-col cols="12">
-        <v-img
-          :src="require('../assets/logo.svg')"
-          class="my-3"
-          contain
-          height="200"
-        />
-      </v-col>
+
 
       <v-col class="mb-4">
         <h1 class="display-2 font-weight-bold mb-3">
@@ -88,13 +86,21 @@
         </v-row>
       </v-col>
     </v-row>
+    <HowTo/>
+    <Partners/>
   </v-container>
 </template>
 
 <script>
+import Partners from './Main/Partners';
+import HowTo from './Main/HowTo';
+
   export default {
     name: 'HelloWorld',
-
+    components: {
+      Partners,
+      HowTo
+    },
     data: () => ({
       ecosystem: [
         {
@@ -149,3 +155,18 @@
     }),
   }
 </script>
+
+<style scoped>
+  .container {
+    padding: 0;
+    max-width: 100%;
+  }
+  .mainImg {
+    background: url(../assets/crowdfounding.jpg) ;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 70vh;
+    opacity: 0.5;
+  }
+</style>
