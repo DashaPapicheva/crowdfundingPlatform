@@ -5,6 +5,7 @@
       color="orange"
       dark
     >
+
       <div class="d-flex align-center">
         <v-img
           alt="Platform Logo"
@@ -61,24 +62,29 @@
       </v-btn>
     </v-app-bar>
 
-    <v-content>
+    <!-- <v-content>
       <HelloWorld/>
-    </v-content>
-    <Footer/>
+    </v-content> -->
+    <!-- <Footer/> -->
+    <div id="nav">
+      <router-link to="/">Home</router-link>
+      <router-link to="/users">Users</router-link>
+    </div>
+    <router-view/>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
-import Footer from './components/Footer';
+// import HelloWorld from './components/HelloWorld';
+// import Footer from './components/Footer';
 
 export default {
   name: 'App',
 
-  components: {
-    HelloWorld,
-    Footer,
-  },
+  // components: {
+  //   HelloWorld,
+  //   Footer,
+  // },
 
   data: () => ({
     //
