@@ -7,23 +7,16 @@
     >
 
       <div class="d-flex align-center">
-        <v-img
-          alt="Platform Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
+        
+        <v-img 
+        alt="Platform Logo"
+        src="@/assets/save-money.png"
+        transition="scale-transition"
+        width="50"
         />
 
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
+        <h1 id="Crowd">Крауд</h1>
+
       </div>
 
       <v-spacer></v-spacer>
@@ -71,23 +64,29 @@
       <router-link to="/users">Users</router-link>
     </div>
     <router-view/>
+    <Footer/>
   </v-app>
 </template>
 
 <script>
 // import HelloWorld from './components/HelloWorld';
-// import Footer from './components/Footer';
+import Footer from './components/Footer';
 
 export default {
   name: 'App',
 
-  // components: {
-  //   HelloWorld,
-  //   Footer,
-  // },
+  components: {
+    Footer,
+  },
 
   data: () => ({
     //
   }),
 };
 </script>
+
+<style scoped>
+  #Crowd {
+    padding-left: 1rem;
+  }
+</style>

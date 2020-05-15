@@ -2,7 +2,19 @@
   <v-container>
 
     <div class="mainImg">
-      <p>Краудфандинговая площадка</p>
+      <div class="onPicture ">
+        <h1 class="name">Краудфандинговая площадка</h1>
+        <p>Здесь готовы поддержать деньгами понравившийся проект</p>
+
+        <ul>
+          <li>Бизнес</li>
+          <li>Творчество</li>
+          <li>Технологии</li>
+          <li>Социальные проекты</li>
+          <li>И многое-многое другое</li>
+        </ul>
+
+      </div>
     </div>
 
     <v-row class="text-center">
@@ -161,12 +173,28 @@ import HowTo from './Main/HowTo';
     padding: 0;
     max-width: 100%;
   }
+
   .mainImg {
-    background: url(../assets/crowdfounding.jpg) ;
+    background-image: url(../assets/crowdfounding.jpg) ;
     width: 100%;
     background-size: cover;
     background-repeat: no-repeat;
     min-height: 70vh;
-    opacity: 0.5;
   }
+
+  .onPicture {
+    padding-top: 4rem;
+    padding-left: 3%;
+    vertical-align: middle;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-content: center;
+    }
+
+  .name {
+    color: black;
+  }
+
 </style>
