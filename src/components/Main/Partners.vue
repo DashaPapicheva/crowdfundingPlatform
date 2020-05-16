@@ -4,14 +4,14 @@
       tile
     >
       <v-card-title>
-        <h1>Партнеры</h1>
+        <h1 class="partnersHeader">Партнёры</h1>
       </v-card-title>
 
       <v-carousel
         hide-delimiters
         height="300"
       >
-        <v-carousel-item
+        <v-carousel-item        
           v-for="(item,i) in partners"
           :key="i"
           :src="item.logo"
@@ -42,3 +42,9 @@ export default {
   }),
 }
 </script>
+
+<style scoped>
+  .partnersHeader {
+    font-size: 2rem;
+  }
+</style>

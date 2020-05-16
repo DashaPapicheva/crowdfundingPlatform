@@ -1,30 +1,34 @@
 <template>
   <v-footer
-    dark
     padless
   >
     <v-card
       tile
-      class="indigo lighten-1 white--text text-center"
+      color="orange"
+      class="mainFooter"
     >
-      <v-card-text>
-        <v-btn
-          v-for="icon in icons"
-          :key="icon"
-          class="mx-4 white--text"
-          icon
-        >
-          <v-icon size="24px">{{ icon }}</v-icon>
-        </v-btn>
-      </v-card-text>
 
-      <v-card-text class="white--text pt-0">
-        Phasellus feugiat arcu sapien, et iaculis ipsum elementum sit amet. Mauris cursus commodo interdum. Praesent ut risus eget metus luctus accumsan id ultrices nunc. Sed at orci sed massa consectetur dignissim a sit amet dui. Duis commodo vitae velit et faucibus. Morbi vehicula lacinia malesuada. Nulla placerat augue vel ipsum ultrices, cursus iaculis dui sollicitudin. Vestibulum eu ipsum vel diam elementum tempor vel ut orci. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+      <v-card-text class="footerText white--text">
+        <div class="aboutUs">
+          <h1 class="footerHead">О нас</h1>
+          <ul>
+            <li><a href="#">Кто мы?</a></li>
+            <li><a href="#">Как работает Крауд</a></li>
+            <li><a href="#">Партнёры</a></li>
+          </ul>
+        </div> 
+        <div class="contacts"> 
+          <h1 class="footerHead">Контакты</h1>
+          <ul>
+            <li>Почта: privet@mail.ru</li>
+            <li>Телефон: +6 666 666 66 66</li>
+          </ul>
+        </div>
       </v-card-text>
 
       <v-divider></v-divider>
 
-      <v-card-text class="white--text">
+      <v-card-text class="lastWord white--text">
         {{ new Date().getFullYear() }} — <strong>Крауд</strong>
       </v-card-text>
     </v-card>
@@ -36,3 +40,44 @@ export default {
   name: "Footer",
 }
 </script>
+
+<style scoped>
+
+  .mainFooter {
+    width: 100%;
+    display: flex;
+    flex-direction: column;;
+  }
+  .footerText {
+    width: 100%;
+    line-height: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .footerHead {
+    margin-bottom: 1rem;
+  }
+
+  .aboutUs ul, .contacts ul {
+    padding-left: 0;
+    margin-left: 0;
+  }
+
+  .aboutUs ul li, .contacts ul li {
+    list-style-type: none;
+    padding-left: 0;
+    margin-left: 0;
+    text-decoration: none;
+  }
+
+    .aboutUs ul li a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .lastWord {
+    text-align: center;
+  }
+</style>
