@@ -11,11 +11,14 @@
         hide-delimiters
         height="300"
       >
-        <v-carousel-item        
+      
+        <v-carousel-item       
           v-for="(item,i) in partners"
           :key="i"
-          :src="item.logo"
-        />
+        >
+          <v-img :src="item.logo" class="items"/>
+        </v-carousel-item>
+        
       </v-carousel>
     </v-card>
   </div>
@@ -46,5 +49,10 @@ export default {
 <style scoped>
   .partnersHeader {
     font-size: 2rem;
+  }
+  .items {
+    max-width: 40rem;
+    max-height: 20rem;
+    margin: auto;
   }
 </style>
