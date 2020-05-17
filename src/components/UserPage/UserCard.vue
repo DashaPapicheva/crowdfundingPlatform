@@ -1,10 +1,7 @@
 <template>
   <div>
     <v-hover v-slot:default="{ hover }">
-      <v-card
-      height="200px"
-      width="200px"
-      >
+      <v-card height="200px" width="200px">
         <v-img
           :src="user.photo"
           class="white--text align-end"
@@ -12,9 +9,9 @@
           height="200px"
           width="200px"
         >
-          <v-card-title 
+          <v-card-title
             class="subtitle-1"
-            v-text="user.name" 
+            v-text="user.name"
             v-show="hover == false"
           />
           <v-expand-transition>
@@ -41,10 +38,10 @@ export default {
   props: {
     user: {
       type: Object,
-      default: null
+      default: null,
     },
-  }
-}
+  },
+};
 </script>
 
 <style scoped>
@@ -52,7 +49,7 @@ export default {
   align-items: center;
   bottom: 0;
   /* justify-content: center; */
-  opacity: .7;
+  opacity: 0.7;
   position: absolute;
   width: 100%;
   overflow: auto;

@@ -1,48 +1,34 @@
 <template>
   <v-app>
-    <v-app-bar
-      app
-      color="orange"
-      dark
-    >
-
+    <v-app-bar app color="orange" dark>
       <div class="d-flex align-center">
-        
-        <v-img 
-        alt="Platform Logo"
-        src="@/assets/save-money.png"
-        transition="scale-transition"
-        width="50"
-        />
-
-        <h1 id="Crowd">Крауд</h1>
-
+        <v-btn to="/" text block>
+          <v-img
+            alt="Platform Logo"
+            src="@/assets/save-money.png"
+            transition="scale-transition"
+            width="50"
+          />
+          <h1 id="Crowd">Крауд</h1>
+        </v-btn>
       </div>
 
       <v-spacer></v-spacer>
 
-      <v-btn
-        href
-        target="_blank"
-        text
-      >
+      <v-btn href target="_blank" text>
         <span class="mr-2">Проекты</span>
       </v-btn>
 
-      <v-btn
-        href
-        target="_blank"
-        text
-      >
+      <v-btn href target="_blank" text>
         <span class="mr-2">Как это работает</span>
       </v-btn>
 
-      <v-btn
-        href
-        target="_blank"
-        text
-      >
+      <v-btn href target="_blank" text>
         <span class="mr-2">Партнёры</span>
+      </v-btn>
+
+      <v-btn to="/users" text>
+        <span class="mr-2">Участники</span>
       </v-btn>
 
       <v-btn
@@ -54,26 +40,19 @@
         <v-icon>mdi-open-in-new</v-icon>
       </v-btn>
     </v-app-bar>
-
-    <!-- <v-content>
-      <HelloWorld/>
-    </v-content> -->
-    <!-- <Footer/> -->
     <div id="nav">
-      <router-link to="/">Home</router-link>
-      <router-link to="/users">Users</router-link>
+      <!-- <router-link to="/">Home</router-link> -->
     </div>
-    <router-view/>
-    <Footer/>
+    <router-view />
+    <Footer />
   </v-app>
 </template>
 
 <script>
-// import HelloWorld from './components/HelloWorld';
-import Footer from './components/Footer';
+import Footer from "./components/Footer";
 
 export default {
-  name: 'App',
+  name: "App",
 
   components: {
     Footer,
@@ -86,7 +65,11 @@ export default {
 </script>
 
 <style scoped>
-  #Crowd {
-    padding-left: 1rem;
-  }
+#Crowd {
+  padding-left: 1rem;
+}
+.theme--dark.v-btn--active:hover::before,
+.theme--dark.v-btn--active::before {
+  opacity: 0;
+}
 </style>

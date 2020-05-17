@@ -4,12 +4,9 @@
       <h1>Наши участники</h1>
     </div>
     <v-container fluid>
-      <v-row dense> 
-        <v-col
-          v-for="user in users"
-          :key="user.id"
-        >
-          <user-card :user="user"/>
+      <v-row dense>
+        <v-col v-for="user in users" :key="user.id">
+          <user-card :user="user" />
         </v-col>
       </v-row>
     </v-container>
@@ -18,7 +15,7 @@
 
 <script>
 import UserCard from "./UserPage/UserCard";
-import axios from 'axios';
+import axios from "axios";
 
 export default {
   name: "UsersPage",
@@ -29,15 +26,16 @@ export default {
     users: [],
   }),
   created() {
-    this.getUsers()
+    this.getUsers();
   },
   methods: {
     getUsers() {
-      axios.get('data/users.json')
-      .then((response) => {this.users = response.data.users})
+      axios.get("data/users.json").then((response) => {
+        this.users = response.data.users;
+      });
     },
   },
-}
+};
 </script>
 
 <style scoped>
@@ -46,5 +44,6 @@ export default {
 }
 .Users {
   margin-top: 4em;
+  padding-bottom: 13rem;
 }
 </style>

@@ -19,10 +19,10 @@
       "funded": 27,
       "participants": {
         "users_id": [2, 3, 4]
-        },
-        "mentors": {
-          "users_id": [1]
-        }
+      },
+      "mentors": {
+        "users_id": [1]
+      }
     },
     {
       "id": 3,
@@ -31,10 +31,10 @@
       "funded": 48,
       "participants": {
         "users_id": [3, 5]
-        },
-        "mentors": {
-          "users_id": [1, 2, 4]
-        }
+      },
+      "mentors": {
+        "users_id": [1, 2, 4]
+      }
     }
   ]
 }
