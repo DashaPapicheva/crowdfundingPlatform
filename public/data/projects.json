@@ -1,0 +1,40 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "name": "Платье на выход",
+      "picture": "https://posta-magazine.ru/wp-content/uploads/2020/04/main_pillow-dress-instagram_posta-magazine.jpg",
+      "funded": 78,
+      "participants": {
+        "users_id": [2, 3]
+      },
+      "mentors": {
+        "users_id": [4, 5]
+      }
+    },
+    {
+      "id": 2,
+      "name": "Настенный ковёр",
+      "picture": "https://interior.ru-best.com/sites/default/files/interer-kvartir/0-2/2e7d1f57bec6.jpg",
+      "funded": 27,
+      "participants": {
+        "users_id": [2, 3, 4]
+        },
+        "mentors": {
+          "users_id": [1]
+        }
+    },
+    {
+      "id": 3,
+      "name": "Секретный рецепт Красти Краба",
+      "picture": "https://cdn.foodbeast.com/wp-content/uploads/2017/07/krabby-patty.jpg",
+      "funded": 48,
+      "participants": {
+        "users_id": [3, 5]
+        },
+        "mentors": {
+          "users_id": [1, 2, 4]
+        }
+    }
+  ]
+}

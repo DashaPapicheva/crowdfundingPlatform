@@ -7,8 +7,7 @@
       <v-row dense> 
         <v-col
           v-for="user in users"
-          :key="user.name"
-          :cols="user.flex"
+          :key="user.id"
         >
           <user-card :user="user"/>
         </v-col>
@@ -19,6 +18,7 @@
 
 <script>
 import UserCard from "./UserPage/UserCard";
+import axios from 'axios';
 
 export default {
   name: "UsersPage",
@@ -26,57 +26,17 @@ export default {
     UserCard,
   },
   data: () => ({
-    users: [
-      {
-        name: "Joe",
-        photo: "https://bloximages.chicago2.vip.townnews.com/nwitimes.com/content/tncms/assets/v3/editorial/0/d9/0d98cbc7-0408-518e-a67d-50ba01ca1bfa/5a7e4016d73b4.image.jpg",
-        age: "23",
-        city: "moscow",
-        rank: "shitbuster",
-        flex: 3,
-      },
-      {
-        name: "Emily",
-        photo: "https://bodyimagemovement.com/shop/wp-content/uploads/2019/10/scarf-2f-.jpg",
-        age: "235",
-        city: "Muhosransk",
-        rank: "whaa",
-        flex: 3,
-      },
-      {
-        name: "Joe",
-        photo: "https://bloximages.chicago2.vip.townnews.com/nwitimes.com/content/tncms/assets/v3/editorial/0/d9/0d98cbc7-0408-518e-a67d-50ba01ca1bfa/5a7e4016d73b4.image.jpg",
-        age: "23",
-        city: "moscow",
-        rank: "shitbuster",
-        flex: 3,
-      },
-      {
-        name: "Emily",
-        photo: "https://bodyimagemovement.com/shop/wp-content/uploads/2019/10/scarf-2f-.jpg",
-        age: "235",
-        city: "Muhosransk",
-        rank: "whaa",
-        flex: 3,
-      },
-      {
-        name: "Joe",
-        photo: "https://bloximages.chicago2.vip.townnews.com/nwitimes.com/content/tncms/assets/v3/editorial/0/d9/0d98cbc7-0408-518e-a67d-50ba01ca1bfa/5a7e4016d73b4.image.jpg",
-        age: "23",
-        city: "moscow",
-        rank: "shitbuster",
-        flex: 3,
-      },
-      {
-        name: "Emily",
-        photo: "https://bodyimagemovement.com/shop/wp-content/uploads/2019/10/scarf-2f-.jpg",
-        age: "235",
-        city: "Muhosransk",
-        rank: "whaa",
-        flex: 3,
-      },
-    ]
+    users: [],
   }),
+  created() {
+    this.getUsers()
+  },
+  methods: {
+    getUsers() {
+      axios.get('data/users.json')
+      .then((response) => {this.users = response.data.users})
+    },
+  },
 }
 </script>
 
